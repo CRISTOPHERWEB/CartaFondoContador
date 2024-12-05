@@ -3,19 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carta</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Yuji+Mai&display=swap" rel="stylesheet">
+    <title>Dedicatoria</title>
 </head>
 <body>
-
-    <div class="conteiner-video">
-        <video autoplay loop muted>
-            <source src="Cinnamon Girl.mp4" type="video/mp4">
-        </video>
-    </div>
-    <div class="conteiner-audio">
-        <audio preload="auto" autoplay>
-            <source src="Lana Del Rey Cinnamon Girl.mp3" type="audio/mp3">
-        </audio>
-    </div>
+    <section id="main-section">
+        <div class="heart">
+            <button id="button" class="uno"></button>
+        </div>
+        <div class="separar-seccion2">
+            <h1 id="dos" class="dos">DAME CLICK :3</h1>
+        </div>
+        <div class="text-adicionales">
+            <p id="text1" class="hidden">TE AMO MUCHOO MEDALY ❤️‍🔥</p>
+            <p id="text2" class="hidden">🔥Tu forma de amarme sana las heridas que pensé que nunca se cerrarían, contigo, el amor finalmente es un refugio y no una tormenta🔥- Cinnamon Girl</p>
+        </div>
+        <div id="media-container" class="hidden">
+            <video id="video" width="500" autoplay muted>
+              <source src="Cinnamon Girl.mp4" type="video/mp4">
+              Tu navegador no soporta este video.
+            </video>
+          </div>
+          <audio autoplay id="musica" src="Lana Del Rey Cinnamon Girl.mp3"></audio>
+    </section>
+    <script src="script.js"></script>
 </body>
 </html>

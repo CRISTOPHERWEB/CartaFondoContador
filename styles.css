@@ -1,0 +1,162 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  display: flex;
+  margin-top: -100px;
+}
+
+section {
+  background-color: white;
+  width: 100%;
+  height: 113vh;
+  display: flex; /* Usamos flexbox para centrar el contenido */
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  flex-direction: column; /* Para apilar los elementos uno debajo del otro */
+}
+
+h1 {
+  font-family: "Yuji Mai", serif;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center; /* Asegura que el texto dentro de h1 esté centrado */
+}
+
+.heart {
+  width: 70px;
+  height: 70px;
+  background-color: #000000;
+  transform: rotate(-45deg);
+  box-shadow: -10px 10px 90px #000000;
+  animation: parpadeo .8s linear infinite alternate-reverse;
+  cursor: pointer;
+}
+
+.heart::before,
+.heart::after {
+  content: "";
+  position: absolute;
+  background: #000000;
+  border-radius: 50%;
+  box-shadow: -10px 10px 90px #000000;
+}
+
+.heart::before {
+  width: 70px;
+  height: 70px;
+  top: -50%;
+}
+
+.heart::after {
+  width: 70px;
+  height: 70px;
+  right: -50%;
+}
+
+.heart.animate {
+  animation: zoomIn .8s 1 linear;
+  opacity: 0;
+}
+
+button{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  padding-top: 25px;
+  position: absolute;
+  text-align: center;
+  justify-content: center; /* Centra el contenido dentro de .uno */
+  cursor: pointer;
+  opacity: 0;
+}
+
+@keyframes parpadeo {
+  0%{
+    scale: 1.0; opacity: 1;
+  } 100% {
+    scale: 1.2; opacity: 0;
+  }
+}
+
+.dos {
+  color: rgb(0, 0, 0);
+  text-shadow: 0 0 35px black;
+  display: flex;
+  margin-top: 18px;
+  justify-content: center; /* Centra el contenido dentro de .dos */
+  animation: parpadeo .8s 3 ease-in-out alternate-reverse ;
+  opacity: 0;
+}
+
+@keyframes zoomIn {
+  0% {
+    scale: 1.0; opacity: 1;
+  }80% {
+    scale: 5.0; opacity: 1;
+  }100%{
+    opacity: 0;
+  }
+}
+
+/* Clase para el fondo negro */
+section.black-bg {
+  background-color: #000000;
+  animation: change-color 1s 1 linear;
+}
+
+h1.black-text {
+  color: white; /* Cambia el texto a blanco */
+}
+
+@keyframes change-color {
+  0%{background-color: white;
+  }
+  100%{background-color: #000000;
+  }
+}
+
+p {
+  color: aliceblue;
+  margin: 0 30px 10px 30px;
+  padding: 10px;
+  border: solid 2px white;
+}
+
+#text1{
+  border: none;
+}
+
+/* Textos adicionales */
+p.hidden {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+p.visible {
+  opacity: 1;
+  transform: translateY(0);
+  animation:parpadeo2 5s infinite ease-in-out alternate;
+}
+
+#media-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  animation:parpadeo2 5s infinite ease-in-out alternate;
+}
+
+@keyframes parpadeo2 {
+  0%{
+    scale: 1.0; opacity: 1;
+  } 100% {
+    scale: 1.1; opacity: 0.5;
+  }
+}
+
