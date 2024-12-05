@@ -121,7 +121,7 @@ h1.black-text {
 
 p {
   color: aliceblue;
-  margin: 0 30px 10px 30px;
+  margin: -5px 30px 10px 30px;
   padding: 10px;
   border: solid 2px white;
 }
