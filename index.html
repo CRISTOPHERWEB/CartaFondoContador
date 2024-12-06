@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,27 +7,35 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Yuji+Mai&display=swap" rel="stylesheet">
-    <title>Dedicatoria</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <title>Dedicatoria a mi ser querido</title>
 </head>
 <body>
     <section id="main-section">
-        <div class="heart">
-            <button id="button" class="uno"></button>
+        <!-- Corazón animado -->
+        <div class="heart" aria-hidden="true">
+            <button id="button" class="uno" aria-label="Haz click aquí para comenzar"></button>
         </div>
-        <div class="separar-seccion2">
+        <!-- Mensaje principal -->
+        <header class="separar-seccion2">
             <h1 id="dos" class="dos">DAME CLICK :3</h1>
-        </div>
-        <div class="text-adicionales">
-            <p id="text1" class="hidden">TE AMO MUCHOO MEDALY ❤️‍🔥</p>
-            <p id="text2" class="hidden">🔥Tu forma de amarme sana las heridas que pensé que nunca se cerrarían, contigo, el amor finalmente es un refugio y no una tormenta🔥- Cinnamon Girl</p>
-        </div>
+        </header>
+        <!-- Textos adicionales -->
+        <article class="text-adicionales">
+            <p id="text1" class="hidden">"Lo único que te pido es que la abraces cuando no esté cerca"❤️‍🔥</p>
+            <p id="text2" class="hidden">🔥Dear God es una balada cargada de emoción en la que el narrador expresa la dificultad de estar lejos de su ser amado debido a la distancia física y la vida en la carretera. A través de la letra, muestra vulnerabilidad y un anhelo profundo, dirigiéndose a Dios para pedir protección y cuidado para su pareja en su ausencia. Es un mensaje de amor, nostalgia y la esperanza de que, aunque estén separados, su conexión siga intacta.🔥</p>
+        </article>
+        <!-- Contenedor multimedia -->
         <div id="media-container" class="hidden">
-            <video id="video" width="500" autoplay muted>
-              <source src="Cinnamon Girl.mp4" type="video/mp4">
-              Tu navegador no soporta este video.
+            <audio autoplay id="musica">
+                <source src="./sonido/Dear God.mp3" type="audio/mpeg">
+                Tu navegador no soporta el audio.
+            </audio>
+            <video id="video" width="500" autoplay muted aria-label="Video musical de Avenged Sevenfold">
+                <source src="./mobile/Avenged Sevenfold Dear God.mp4" type="video/mp4">
+                Tu navegador no soporta este video.
             </video>
-          </div>
-          <audio controls id="musica" src="Lana Del Rey Cinnamon Girl.mp3"></audio>
+        </div>
     </section>
     <script src="script.js"></script>
 </body>
