@@ -267,11 +267,13 @@ h1{
     transition: all ease-out 0.7s;
 }
 .promo p {
+    color: white;
     font-size: 20px;
     margin: -12px;
     font-weight: 800;
   }
 .promo h2 {
+    color: white;
     font-size: 30px;
     margin-top: 5px;
 }
