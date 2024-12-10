@@ -1,29 +1,41 @@
-document.getElementById('button').addEventListener('click', function () {
-    // Selecciona el elemento 'section'
-    const section = document.getElementById('main-section');
-  
-    // Selecciona el título 'h1'
-    const h1 = section.querySelector('h1');
-  
-    // Cambia el fondo a negro y el texto a blanco
-    section.classList.add('black-bg');
-    h1.classList.add('black-text');
-  
-    // Activa la animación del corazón
-    document.querySelector('.heart').classList.add('animate');
-  
-    // Muestra los textos adicionales después de un tiempo
-    setTimeout(() => {
-      document.getElementById('text1').classList.add('visible'); // Muestra el primer texto
-    }, 3000); // Después de 3 segundos
-  
-    setTimeout(() => {
-      document.getElementById('text2').classList.add('visible'); // Muestra el segundo texto
-    }, 6000); // Después de 6 segundos
+// Selección de elementos
+const video = document.getElementById('myVideo');
+const playButton = document.getElementById('playButton');
 
-    // Después de 8 segundos, muestra el video y el audio
-    setTimeout(() => {
-        document.getElementById('media-container').classList.remove('hidden'); // Muestra el contenedor multimedia
-    }, 8000); // Después de 8 segundos
-  });
-  
+// Evento para reproducir el video
+playButton.addEventListener('click', () => {
+  // Intenta reproducir el video
+  video.play()
+    .then(() => {
+      console.log('Video reproduciéndose con audio.');
+    })
+    .catch((error) => {
+      console.error('Error al intentar reproducir el video:', error);
+    });
+});
+
+// Selección de elementos
+const container = document.getElementById("container-heart");
+const heart = document.getElementById("heart");
+const button = document.getElementById("trans1");
+
+// Evento de clic
+button.addEventListener("click", () => {
+  // Cambia el color del fondo
+  container.classList.add("active");
+
+  // Desvanecer el corazón después de 1 segundo
+  setTimeout(() => {
+    heart.classList.add("hidden");
+  }, 1000); // Tiempo sincronizado con la transición del fondo
+});
+
+// Seleccionar elementos
+const tapa = document.getElementById('tapaAudio');
+const audio = document.getElementById('audio');
+
+// Reproducir audio al hacer clic en la tapa
+tapa.addEventListener('click', () => {
+  audio.currentTime = 0; // Reinicia el audio
+  audio.play(); // Reproduce el audio
+});

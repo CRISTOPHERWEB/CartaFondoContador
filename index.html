@@ -1,41 +1,54 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Yuji+Mai&display=swap" rel="stylesheet">
-    <title>Dedicatoria a mi ser querido</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Yuji+Mai&display=swap" rel="stylesheet">
+    <title>Regalitos</title>
 </head>
 <body>
-    <section id="main-section">
-        <!-- Corazón animado -->
-        <div class="heart" aria-hidden="true">
-            <button id="button" class="uno" aria-label="Haz click aquí para comenzar"></button>
+    <section class="container-film">
+        <div class="film-present">
+          <video id="myVideo" controls>
+            <source src="Paramore Still into you.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <div class="container-botton-video">
+            <button id="playButton" class="roll-in-top">Play - sigue bajando</button>
+          </div>
         </div>
-        <!-- Mensaje principal -->
-        <header class="separar-seccion2">
-            <h1 id="dos" class="dos">DAME CLICK :3</h1>
-        </header>
-        <!-- Textos adicionales -->
-        <article class="text-adicionales">
-            <p id="text1" class="hidden">"Lo único que te pido es que la abraces cuando no esté cerca"❤️‍🔥</p>
-            <p id="text2" class="hidden">🔥Dear God es una balada cargada de emoción en la que el narrador expresa la dificultad de estar lejos de su ser amado debido a la distancia física y la vida en la carretera. A través de la letra, muestra vulnerabilidad y un anhelo profundo, dirigiéndose a Dios para pedir protección y cuidado para su pareja en su ausencia. Es un mensaje de amor, nostalgia y la esperanza de que, aunque estén separados, su conexión siga intacta.🔥</p>
-        </article>
-        <!-- Contenedor multimedia -->
-        <div id="media-container" class="hidden">
-            <audio id="musica" controls style="margin-top: 15px; opacity: 0.3;">
-                <source src="Dear God.mp3" type="audio/mp3">
-                Tu navegador no soporta el audio.
-            </audio>
-            <video id="video" width="500" autoplay muted aria-label="Video musical de Avenged Sevenfold">
-                <source src="Avenged Sevenfold - Dear God.mp4" type="video/mp4">
-                Tu navegador no soporta este video.
-            </video>
-        </div>
+        <h1>Te conoci y tomó sentido "Still Into You"</h1>
     </section>
+    <section class="container-heart" id="container-heart">
+        <div class="heart">
+            <button type="submit" id="trans1" class="buttom-heart">Click</button>
+            <div class="container-heart-frase">
+              <p class="text-heart">
+                "Feliz cumpleaños, mi musa oscura y brillante. Eres como una canción de Lana, un grito de Paramore y un susurro de Amy Lee: pura magia, fuerza y belleza. ¡Hoy el mundo canta por ti!" 🎶</p>
+            </div>
+        </div>
+    <div class="heart-title">Dale click</div>
+    </section>
+    <section class="container-regalo">
+      <img src="globos.jpg" alt="Globos de feliz cumpleaños">
+        <div class="regalo">
+            <div class="tapa" id="tapaAudio">
+              <span></span>
+            </div>
+            <div class="promo">
+              <p>Feliz Cumpleaños Medaly</p>
+              <h2>21 añitos</h2>
+            </div>
+            <div class="caja">
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+    </section>
+    <audio id="audio" src="Celebracion.mp3"></audio>    
     <script src="script.js"></script>
 </body>
 </html>
